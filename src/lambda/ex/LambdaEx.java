@@ -7,6 +7,7 @@ public class LambdaEx {
 		
 		FunctionaLInterfaceEx fl = s->s;
 		System.out.println(fl.name("Ajay"));
+		FunctionaLInterfaceEx.m1();
 	}
 	
 }
