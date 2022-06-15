@@ -10,7 +10,7 @@ public class BookService {
 		
 		List<Book> book  =new BookDB().getBooks();
 		 
-		Collections.sort(book,(o1,o2) -> o1.getName().compareTo(o2.getName()));
+		Collections.sort(book,new Mycomparator());
 		
 		return book;
 	}
@@ -19,12 +19,12 @@ public class BookService {
 	
 }
 
-//class Mycomparator implements Comparator<Book>{
-//
-//	@Override
-//	public int compare(Book o1, Book o2) {
-//		
-//		return o2.getName().compareTo(o1.getName());
-//	}
-//	
-//}
+class Mycomparator implements Comparator<Book>{
+
+	@Override
+	public int compare(Book o1, Book o2) {
+		
+		return o2.getName().compareTo(o1.getName());
+	}
+	
+}
